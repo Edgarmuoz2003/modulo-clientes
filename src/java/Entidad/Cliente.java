@@ -2,27 +2,27 @@ package Entidad;
 
 public class Cliente {
 
-    int id;
+    int ID;
     String RazonSocial;
-    String telefono;
-    String direccion;
+    String TELEFONO;
+    String DIRECCION;
 
     public Cliente() {
     }
 
-    public Cliente(int id, String RazonSocial, String telefono, String direccion) {
-        this.id = id;
+    public Cliente(int ID, String RazonSocial, String TELEFONO, String DIRECCION) {
+        this.ID = ID;
         this.RazonSocial = RazonSocial;
-        this.telefono = telefono;
-        this.direccion = direccion;
+        this.TELEFONO = TELEFONO;
+        this.DIRECCION = DIRECCION;
     }
 
-    public int getId() {
-        return id;
+    public int getID() {
+        return ID;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setID(int ID) {
+        this.ID = ID;
     }
 
     public String getRazonSocial() {
@@ -33,22 +33,20 @@ public class Cliente {
         this.RazonSocial = RazonSocial;
     }
 
-    public String getTelefono() {
-        return telefono;
+    public String getTELEFONO() {
+        return TELEFONO;
     }
 
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
+    public void setTELEFONO(String TELEFONO) {
+        this.TELEFONO = TELEFONO;
     }
 
-    public String getDireccion() {
-        return direccion;
+    public String getDIRECCION() {
+        return DIRECCION;
     }
 
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
+    public void setDIRECCION(String DIRECCION) {
+        this.DIRECCION = DIRECCION;
     }
-    
-    
 
 }

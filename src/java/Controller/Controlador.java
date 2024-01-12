@@ -32,4 +32,11 @@ public class Controlador {
         mav.setViewName("agregar");
         return mav;
     }
+    
+    @RequestMapping(value = "agregar.htm", method = RequestMethod.POST)
+    public ModelAndView Agregar(Cliente c){
+        String sql="insert into clientes(ID, RazonSocial, TELEFONO, DIRECCION) values(?,?,?,?)";
+        this.jdbcTemplate.update(sql, c.getID(), c.getRazonSocial(), c.getTELEFONO(), c.getDIRECCION());
+        return new ModelAndView("redirect:/index.htm");
+    }
 }

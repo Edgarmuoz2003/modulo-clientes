@@ -16,10 +16,13 @@
                 </div>
                 <div class="card-body" >
                     <form method="POST">
-                        <label>Nombres</label>
+                        <label>Identificacion</label>
                         <input type="text" name="ID" class="form-control">
+                        <label>Razon social</label>
                         <input type="text" name="RazonSocial" class="form-control">
+                        <label>Telefono</label>
                         <input type="text" name="TELEFONO" class="form-control">
+                        <label>Direccion</label>
                         <input type="text" name="DIRECCION" class="form-control">
                         <input type="submit" value="Agregar" class="btn btn-success">
                         <a href="index.htm" >Regresar</a>
