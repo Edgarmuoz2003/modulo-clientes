@@ -9,6 +9,8 @@ import Entidad.Cliente;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import org.springframework.jdbc.core.JdbcTemplate;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.request;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.request;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
@@ -57,6 +59,14 @@ public class Controlador {
     public ModelAndView editar(Cliente c){
         String sql="update clientes set ID=?, RazonSocial=?, TELEFONO=?, DIRECCION=? where id=" +id;
         this.jdbcTemplate.update(sql, c.getID(), c.getRazonSocial(), c.getTELEFONO(), c.getDIRECCION());
+        return new ModelAndView("redirect:/index.htm");
+    }
+    
+    @RequestMapping(value = "eliminar.htm")
+    public ModelAndView eliminar(HttpServletRequest request){
+        id=Integer.parseInt(request.getParameter("id"));
+        String sql="delete from clientes where id=" +id;
+        this.jdbcTemplate.update(sql);
         return new ModelAndView("redirect:/index.htm");
     }
 }

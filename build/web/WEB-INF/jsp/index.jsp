@@ -37,7 +37,7 @@
                                 <td>${datos.DIRECCION}</td>
                                 <td>
                                     <a href="editar.htm?id=${datos.ID}" class="btn btn-warning" >Editar</a>
-                                    <a class="btn btn-danger" >Eliminar</a> 
+                                    <a href="eliminar.htm?id=${datos.ID}" class="btn btn-danger" >Eliminar</a> 
                                 </td>
                             </tr>
                         </c:forEach>    
