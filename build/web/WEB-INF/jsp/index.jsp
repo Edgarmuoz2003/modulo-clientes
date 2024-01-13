@@ -36,7 +36,7 @@
                                 <td>${datos.TELEFONO}</td>
                                 <td>${datos.DIRECCION}</td>
                                 <td>
-                                    <a class="btn btn-warning" >Editar</a>
+                                    <a href="editar.htm?id=${datos.ID}" class="btn btn-warning" >Editar</a>
                                     <a class="btn btn-danger" >Eliminar</a> 
                                 </td>
                             </tr>
